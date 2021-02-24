@@ -1,0 +1,77 @@
+/* transitions css */
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+#containerOne {
+    display: flex;
+}
+
+#containerTwo {
+    display: flex;
+}
+
+.hover, .rotate, .translatex, .translateY, .threeD, .skew, .scale {
+
+    width: 100px;
+    line-height: 0;
+    padding: 50px 0;
+    margin: 50px auto;
+    background-color: tomato;
+    border-radius: 50px;
+    cursor: pointer; 
+    color: black;
+    -moz-transition-property: color, background-color, transform;
+    transition-property: color, background-color, transform;
+    -moz-transition-duration: 2s;
+    transition-duration: 2s;
+    -moz-transition-delay: 0s;
+    transition-delay: 0s;
+    -moz-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    
+}
+
+.hover:hover {
+    color: darkgrey;
+background-color: peachpuff;
+}
+
+.rotate:hover {
+    background-color: darksalmon;
+    transform: rotate(1turn);
+}
+
+.skew:hover {
+    background-color: dodgerblue;
+    color: darkslategray;
+    transform: skew(30deg, 20deg);
+}
+
+.translatex:hover {
+    background-color: honeydew;
+    transform: translateX(50px);
+}
+
+.translateY:hover {
+    background-color: lightgoldenrodyellow;
+    transform: translateY(100px);
+}
+
+
+.scale:hover {
+    background-color: mintcream;
+    transform: scale(5);
+}
+
+.threeD:hover {
+    background-color: lightsteelblue;
+    transform: rotate3d(4, 4.0, 1.0, 360deg);
+}
