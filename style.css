@@ -50,15 +50,20 @@ p:hover {
 
 /* transitions css */
 
-body {
-    font-family: 'Courier New', Courier, monospace;
+.mainBody {
+    font-family:'Courier New', Courier, monospace;
     text-align: center;
 }
 
-h1 {
+.mainBody h1 {
     font-weight: 200;
     text-transform: uppercase;
 }
+
+.navBar {
+    text-align: left;
+}
+
 
 #containerOne {
     display: flex;
@@ -125,3 +130,124 @@ background-color: peachpuff;
     background-color: lightsteelblue;
     transform: rotate3d(4, 4.0, 1.0, 360deg);
 }
+
+/* animation css */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.sky {
+    width: 100%;
+    background-color: skyblue;
+    height: 270px;
+}
+
+.sun {
+    width: 100px;
+    line-height: 0;
+    padding: 50px 0;
+    /* margin: 50px auto; */
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+.grass {
+    width: 100%;
+    background-color: green;
+    height: 200px;
+}
+
+.road {
+    background-color: grey;
+    height: 300px;
+}
+
+.lines {
+    font-size: 105px;
+    font-weight: 800;
+    color: white;
+    /* border: 7px dashed white;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 82%; */
+}
+
+.car img {
+    width: 350px;
+}
+
+.car {
+    position: absolute;
+    top: 65%;
+    left: -200px;
+    z-index: 10;
+    animation-duration: 6s;
+    animation-name: goRight;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes goRight {
+      /* 0% {
+          transform: translateX(0px);
+      }
+
+      25% {
+          transform: translateX(220px);
+      }
+
+      50% {
+          transform: translateX(-40);
+      }
+
+      75% {
+          transform: translateX(600px);
+      }
+
+      100% {
+          transform: translateX(880px);
+      } */
+    
+    
+    
+      from {
+      transform: translate(0,0);
+    }
+  
+    to {
+      transform: translate(1920px,0);
+    }
+  }
+
+  /* css selectors css */
+
+  .section1 h1 {
+      color: darkred;
+  }
+
+  h1 {
+      color: darkslategray
+  }
+
+  .section2 h1 {
+      color: darkolivegreen;
+  }
+
+  .section3 h1 {
+      color: darkorange;
+  }
+
+  .section2 ul li {
+    list-style-type: none;
+    color:darkslategray;
+    font-size: 25px;
+    transition-property: color, transform;
+    transition-duration: 2s;
+  }
+
+  .section2 ul li:hover {
+      color: white;
+      transform: translateX(40px);
+  }
